@@ -1,0 +1,68 @@
+body {
+background: #000;
+}
+#background {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: transparent url('./img/vno_slovenia.jpg') no-repeat 50% 50%;
+  border: 2px solid red;
+}
+/*Bar with names n header*/
+.header {
+  position: relative;
+/*  z-index: 2;*/
+  background: rgba(255,255,255,0.5);
+  border: 2px solid red;
+}
+.header h1 {
+  font-family: 'itc-avant-garde';
+  font-size: 2em;
+  width: 100%;
+  text-align: center;
+}
+.omar {
+  color: black;
+}
+.vanessa {
+    color: #a71e25;
+}
+
+/*Main frame*/
+#container {
+  position: absolute;  
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  border: 2px solid blue;
+}
+.row_pics {
+  position: absolute;
+  width: 50%
+  height: 20%;
+  border: 2px solid green;
+}
+
+#row_top {
+  top: 10%;
+}
+#row_bottom {
+  top: 60%;
+}
+.col_pics {
+  position: absolute;
+  width: 20%
+  height: 50%;
+  border: 2px solid green;
+}
+#container ul li {
+  background: transparent url('./img/vno_slovenia.jpg') no-repeat 5% 5%;  
+}
+.list_horizontal {
+  display: inline;
+}
+.list_vertical {
+
+}
