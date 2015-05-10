@@ -40,25 +40,38 @@ background: #000;
 }
 .row_pics {
   position: absolute;
-  width: 50%
+  left: 25%;
+  width: 50%;
   height: 20%;
   border: 2px solid green;
 }
-
 #row_top {
-  top: 10%;
+  top: 5%;
 }
 #row_bottom {
-  top: 60%;
+  bottom: 5%;
 }
 .col_pics {
   position: absolute;
-  width: 20%
+  top: 25%;
+  width: 10%;
   height: 50%;
+  display: inline-block;
   border: 2px solid green;
 }
+#col_left{
+  left:5%;
+}
+#col_right{
+  right:5%;
+}
+#container ul {
+  /*display: block*/
+}
 #container ul li {
-  background: transparent url('./img/vno_slovenia.jpg') no-repeat 5% 5%;  
+  background: transparent url('./img/vno_slovenia.jpg') no-repeat; 
+  width: 75px;
+  height: 75px;
 }
 .list_horizontal {
   display: inline;
