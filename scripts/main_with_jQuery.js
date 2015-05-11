@@ -1,6 +1,11 @@
 // soundManager.setup({ url: './SM2/swf/' });
   $(document).ready(function() {
   setUpEventListeners()
+  soundManager.setup( {
+    url: './SM2/swf/',
+    flashVersion:9,
+    preferFlash: false,
+  })
 })
 // soundManager.onload = function(){
 //   soundManager.createSound()
@@ -9,46 +14,44 @@
 /* Event Listeners  */
 var setUpEventListeners = function() {
   $('#pictop1').on('click', function() {
-    console.log( 'opapa_clap.play()' )
+    playSound('opapa_clap.m4a');
   })
   $('#pictop2').on('click', function() {
-    console.log( 'vpapa_intro.play()' )
+    playSound('vpapa_intro.m4a');
   })
   $('#pictop3').on('click', function() {
-    console.log( 'woow_call_maybe()' )
+    playSound('woow_call_maybe.m4a')
   })
   $('#cake').on('click', function() {
-    console.log( 'coldplay_cake.play()' )
+    playSound( 'coldplay_cake.m4a' )
   })
   $('#pictop4').on('click', function() {
-    console.log( 'bravo.play()' )
+    playSound( 'bravo.m4a' )
   })
   $('#pictop5').on('click', function() {
-    console.log( 'habibi_clap.play()' )
+    playSound( 'habibi_clap.m4a' )
   })
   $('#pictop6').on('click', function() {
-    console.log( 'Omarpapa_laugh.play()' )
+    playSound( 'Omarpapa_laugh.m4a' )
   })
   $('#happy').on('click', function() {
-    console.log( 'happy.togglePause()' )
+    playSound( 'happy.mp3' )
   })
 
 } /* end Listeners  */
 
 /* Functions linked to Listeners  */
-
+function playSound(file) {
+  var file = soundManager.createSound({
+    url: './audio/' +file});
+  file.play();
+}
+function togglePauseSound(file) {
+  var file = soundManager.createSound({
+    url: './audio/' +file});
+  file.togglePause();
+}
 /* end Functions linked to listeners */
 
-/* All sounds */
-var opapa_clap = soundManager.createSound({ url: './audio/opapa_clap.m4a'});
-var vpapa_intro = soundManager.createSound({ url: './audio/vpapa_intro.m4a'});
-var woow_call_maybe = soundManager.createSound({ url: './audio/woow_call_maybe.m4a'});
-var coldplay_cake = soundManager.createSound({ url: './audio/coldplay_cake.m4a'});
-var bravo = soundManager.createSound({ url: './audio/bravo.m4a'});
-var habibi_clap = soundManager.createSound({ url: './audio/habibi_clap.m4a'});
-var Omarpapa_laugh = soundManager.createSound({ url: './audio/Omarpapa_laugh.m4a'});
-var happy = soundManager.createSound({ url: './audio/happy.m4a'});
-// End sounds declarations
 
-
-
+// Show/hide the key codes
