@@ -1,15 +1,11 @@
-// soundManager.setup({ url: './SM2/swf/' });
-  $(document).ready(function() {
-  setUpEventListeners()
+$(document).ready(function(){
+  setUpEventListeners();
   soundManager.setup( {
     url: './SM2/swf/',
     flashVersion:9,
     preferFlash: false,
   })
 })
-// soundManager.onload = function(){
-//   soundManager.createSound()
-// }
 
 /* Event Listeners  */
 var setUpEventListeners = function() {
@@ -35,7 +31,7 @@ var setUpEventListeners = function() {
     playSound( 'Omarpapa_laugh.m4a' )
   })
   $('#happy').on('click', function() {
-    playSound( 'happy.mp3' )
+    togglePauseSound('happy.mp3')
   })
 
 } /* end Listeners  */
@@ -43,13 +39,14 @@ var setUpEventListeners = function() {
 /* Functions linked to Listeners  */
 function playSound(file) {
   var file = soundManager.createSound({
+    id: 'file',
     url: './audio/' +file});
   file.play();
 }
 function togglePauseSound(file) {
-  var file = soundManager.createSound({
-    url: './audio/' +file});
-  file.togglePause();
+  if (soundManager.getSoundById(file) === 'undefined') {
+    playSound(file); 
+  } else soundManager.togglePause(file);
 }
 /* end Functions linked to listeners */
 
