@@ -1,5 +1,5 @@
 body {
-background: #000;
+background: rgba(2, 1, 8, 0.86);
 }
 #background {
   position: absolute;
@@ -7,21 +7,30 @@ background: #000;
   top: 0px;
   width: 100%;
   height: 100%;
-  background: transparent url('./img/vno_slovenia.jpg') no-repeat 50% 50%;
-  border: 2px solid red;
+  background: transparent url('./img/bgbig.jpg') no-repeat 50% 50%;
+  background-size: 80%;
 }
 /*Bar with names n header*/
 .header {
   position: relative;
-/*  z-index: 2;*/
-  background: rgba(255,255,255,0.5);
-  border: 2px solid red;
+  background: rgba(255,255,255,0.25);
+  /*border: 2px solid red;*/
 }
 .header h1 {
   font-family: 'itc-avant-garde';
   font-size: 2em;
   width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center;
+  vertical-align: middle;
+}
+#happy {
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  margin-right: 30px;
+  vertical-align: middle;
 }
 .omar {
   color: black;
@@ -33,22 +42,22 @@ background: #000;
 /*Main frame*/
 #container {
   position: absolute;  
-  left: 10%;
-  width: 80%;
+  left: 7%;
+  width: 90%;
   height: 80%;
-  border: 2px solid blue;
 }
 .row_pics {
-  position: absolute;
-  left: 25%;
-  width: 50%;
+  position: relative;
+  left: 5%;
+  width: 90%;
   height: 20%;
-  border: 2px solid green;
+  /*border: 2px solid green;*/
 }
 #row_top {
-  top: 5%;
+  top: 2%;
+  margin-top: -2%;
 }
-#row_bottom {
+/*#row_bottom {
   bottom: 5%;
 }
 .col_pics {
@@ -64,18 +73,44 @@ background: #000;
 }
 #col_right{
   right:5%;
-}
+}*/
 #container ul {
-  /*display: block*/
-}
-#container ul li {
-  background: transparent url('./img/vno_slovenia.jpg') no-repeat; 
-  width: 75px;
-  height: 75px;
-}
-.list_horizontal {
-  display: inline;
-}
-.list_vertical {
 
 }
+#container ul li {
+  width: 90px;
+  height: 90px;
+  background-size: 100% 100%;
+  border-radius: 30px;
+}
+.list_horizontal li {
+  display: inline-block; 
+  margin: 0px 15px 0px 15px;
+  padding: 0;
+}
+
+
+/*All pics*/
+#pictop1 {
+  background: transparent url('./img/vyoung.jpg') no-repeat;
+  } 
+#pictop2 {
+  background: transparent url('./img/papa.jpg') no-repeat;
+  } 
+#pictop3 {
+  background: transparent url('./img/aladin.jpg') no-repeat;
+  } 
+#cake {
+  background: transparent url('./img/cake.jpg') no-repeat;
+}  
+#pictop4 {
+  background: transparent url('./img/vno_slovenia.jpg') no-repeat;
+}  
+
+#pictop5 {
+  background: transparent url('./img/gq.jpg') no-repeat;
+
+  } 
+#pictop6 {
+  background: transparent url('./img/oyoung.jpg') no-repeat;
+  } 
